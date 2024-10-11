@@ -27,6 +27,7 @@ public class UtentiDAO {
     public Utente getById(long utenteId) {
         Utente found = entityManager.find(Utente.class, utenteId);
         if (found == null) throw new NotFoundException(utenteId);
+        System.out.println(found.toString());
         return found;
     }
 

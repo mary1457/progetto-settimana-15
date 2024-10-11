@@ -32,6 +32,7 @@ public class PrestitiDAO {
     public Prestito getById(long prestitoId) {
         Prestito found = entityManager.find(Prestito.class, prestitoId);
         if (found == null) throw new NotFoundException(prestitoId);
+        System.out.println(found.toString());
         return found;
     }
 
